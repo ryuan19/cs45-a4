@@ -11,3 +11,6 @@ based on what the selections are. Rock beats scissors (by crushing them); scisso
 beats paper (by cutting it); and paper beats rock (by covering it). If both players\
 select the same one, it is a tie"
 
+print(rules)
+print()
+
