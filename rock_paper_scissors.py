@@ -14,37 +14,42 @@ select the same one, it is a tie"
 print(rules)
 print()
 
-play = False
-name = input("Choose your weapon... rock, paper, or scissors: ")
-while (name.lower() != "rock" and name.lower() != "paper" and name.lower() != "scissors"):
-    name = input("Invalid choice. Choose your weapon: rock, paper, or scissors: ")
+play = True
+while (play):
+  play = False
+  name = input("Choose your weapon... rock, paper, or scissors: ")
+  while (name.lower() != "rock" and name.lower() != "paper" and name.lower() != "scissors"):
+      name = input("Invalid choice. Choose your weapon: rock, paper, or scissors: ")
 
-print("Your choice is", name,"!")
-print("Computer choosing . . .")
-l = ["rock","paper","scissors"]
-comp = random.choice(l)
-print("Those computer chose", comp, "!")
-if (comp == "scissors"):
-  if (name == "paper"):
-    print("You lost!")
-  elif (name == "rock"):
-    print("You won!")
-  else:
-    print("You tied!")
-    play = True
-elif (comp == "rock"):
-  if (name == "paper"):
-    print("You won!")
-  elif (name == "rock"):
-    print("You tied!")
-    play = True
-  else:
-    print("You lost!")
-else: #paper
-  if (name == "paper"):
-    print("You tied!")
-    play = True
-  elif (name == "rock"):
-    print("You lost!")
-  else:
-    print("You won!")
+  print("Your choice is", name,"!")
+  print("Computer choosing . . .")
+  l = ["rock","paper","scissors"]
+  comp = random.choice(l)
+  print("Those computer chose", comp, "!")
+  if (comp == "scissors"):
+    if (name == "paper"):
+      print("You lost!")
+    elif (name == "rock"):
+      print("You won!")
+    else:
+      print("You tied!")
+      play = True
+  elif (comp == "rock"):
+    if (name == "paper"):
+      print("You won!")
+    elif (name == "rock"):
+      print("You tied!")
+      play = True
+    else:
+      print("You lost!")
+  else: #paper
+    if (name == "paper"):
+      print("You tied!")
+      play = True
+    elif (name == "rock"):
+      print("You lost!")
+    else:
+      print("You won!")
+
+print("good game. you will never tie.")
+print("no ties")
