@@ -52,4 +52,4 @@ while (play):
       print("You won!")
 
 print("good game. you will never tie.")
-print("no ties")
+print("no ties!!!")
